@@ -14,7 +14,6 @@ const boxesEl = document.querySelector("#boxes");
 createBtnEl.addEventListener("click", handleCreateBoxes);
 destroyBtnEl.addEventListener("click", handleDestroyBoxes);
 amountEl.addEventListener("change", handleGetAmount);
-amountEl.addEventListener("focus", handleDestroyBoxes);
 
 function createBoxes(amount) {
   let height = 20;
@@ -41,6 +40,7 @@ function handleGetAmount(event) {
 
 function handleCreateBoxes() {
   const amount = amountEl.value;
+  boxesEl.innerHTML = "";
   createBoxes(amount);
 }
 
