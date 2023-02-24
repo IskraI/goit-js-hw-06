@@ -5,9 +5,11 @@ formEl.addEventListener("submit", handleFormSubmit);
 function handleFormSubmit(event) {
   event.preventDefault();
 
+  const { email, password } = event.currentTarget;
+
   const elements = {
-    email: event.currentTarget.email.value,
-    password: event.currentTarget.password.value,
+    email: email.value,
+    password: password.value,
   };
 
   if (elements.email === "" || elements.password === "") {
